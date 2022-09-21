@@ -1,12 +1,11 @@
 import "./App.css";
+import Weather from "./Weather";
 
 function App() {
   return (
     <div className="App">
-      <div className="container">
-        <header className="App-header">
-          <h1>Weather App</h1>
-        </header>
+      <div className="container pt-5">
+        <Weather />
         <footer>
           <a
             href="https://github.com/nataliey16/search-engine-react.git"

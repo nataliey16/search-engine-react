@@ -1,0 +1,18 @@
+.Weather {
+  padding: 30px;
+  border: 1px solid #202124;
+  border-radius: 10px;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+.Weather ul {
+  list-style: none;
+}
+
+.weather-description ul {
+  display: flex;
+  justify-content: space-evenly;
+}
