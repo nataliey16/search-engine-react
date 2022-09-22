@@ -4,7 +4,16 @@ import Weather from "./Weather";
 function App() {
   return (
     <div className="App">
-      <div className="container pt-5">
+      <header>
+        <ul className="App-header">
+          <li className="current-date">Sept 21 2022</li>
+          <li className="city">
+            Calgary,
+            <div>Alberta</div>
+          </li>
+        </ul>
+      </header>
+      <div className="container">
         <Weather />
         <footer>
           <a
@@ -12,7 +21,7 @@ function App() {
             target="_blank"
             rel="noreferrer"
           >
-            Open source code
+            Open-source code
           </a>{" "}
           by Natalie Yeung
         </footer>

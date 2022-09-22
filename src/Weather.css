@@ -1,18 +1,48 @@
 .Weather {
-  padding: 30px;
-  border: 1px solid #202124;
-  border-radius: 10px;
+  background: linear-gradient(
+    179.1deg,
+    rgb(247, 238, 238) -1.9%,
+    rgb(247, 202, 201) 44.9%,
+    rgb(145, 168, 208) 96.1%
+  );
+  border: 1px solid (255, 0, 0);
+  border-radius: 40px;
+  padding: 50px;
+  max-width: 600px;
+  font-family: "Raleway", sans-serif;
+  font-size: 22px;
+  text-align: center;
 }
 
-img {
+.Weather img {
   display: block;
   margin: 0 auto;
+  width: 75%;
+  height: auto;
 }
 .Weather ul {
   list-style: none;
 }
 
-.weather-description ul {
-  display: flex;
-  justify-content: space-evenly;
+.Weather .temperature {
+  font-size: 90px;
+  font-weight: 500;
+}
+
+.Weather .units {
+  font-size: 25px;
+  font-weight: 500;
+}
+hr {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.Weather .weather-description {
+  font-size: 15px;
+}
+
+.Weather .weather-value {
+  font-size: 30px;
 }
