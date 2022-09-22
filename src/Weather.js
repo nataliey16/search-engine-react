@@ -15,7 +15,7 @@ export default function Weather() {
           </div>
           <div className="col-md-3">
             <input
-              className="btn btn-primary"
+              className="btn btn-branding"
               type="submit"
               value="Submit"
             ></input>
