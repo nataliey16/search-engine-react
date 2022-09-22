@@ -16,14 +16,15 @@ function App() {
       <div className="container">
         <Weather />
         <footer>
+          This project was coded by Natalie Yeung and it is
           <a
             href="https://github.com/nataliey16/search-engine-react.git"
             target="_blank"
             rel="noreferrer"
           >
-            Open-source code
+            {" "}
+            open-sourced on Github
           </a>{" "}
-          by Natalie Yeung
         </footer>
       </div>
     </div>
