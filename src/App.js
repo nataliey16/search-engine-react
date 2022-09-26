@@ -4,17 +4,8 @@ import Weather from "./Weather";
 function App() {
   return (
     <div className="App">
-      <header>
-        <ul className="App-header">
-          <li className="current-date">Sept 21 2022</li>
-          <li className="city">
-            Calgary,
-            <div>Alberta</div>
-          </li>
-        </ul>
-      </header>
       <div className="container">
-        <Weather />
+        <Weather defaultCity="New York" />
         <footer>
           This project was coded by Natalie Yeung and it is
           <a

@@ -1,21 +1,32 @@
-import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
 import { useState } from "react";
+import { LineWave } from "react-loader-spinner";
 
-export default function Weather() {
-  let [ready, setReady] = useState(false);
-  let apiKey = "0f380eeef06d6360d28eb090a2663364";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(handleWeatherData);
+export default function Weather(props) {
+  let [weatherData, setWeatherData] = useState({ ready: false });
 
   function handleWeatherData(response) {
-    return console.log(response.data);
+    setWeatherData({
+      ready: true,
+      date: "Sept 21 2022",
+      temperature: response.data.main.temp,
+      humidity: response.data.main.humidity,
+      wind: response.data.wind.speed,
+      iconUrl: "https://ssl.gstatic.com/onebox/weather/64/sunny.png",
+      description: response.data.weather[0].description,
+      city: response.data.name,
+    });
   }
-
-  if (ready) {
+  if (weatherData.ready) {
     return (
       <div className="Weather">
+        <header>
+          <ul className="App-header">
+            <li className="current-date">{weatherData.date}</li>
+            <li className="city">{weatherData.city}</li>
+          </ul>
+        </header>
         <form>
           <div className="row">
             <div className="col-md-9">
@@ -39,7 +50,7 @@ export default function Weather() {
           <div className="col-md-6">
             <img
               className="img-fluid"
-              src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+              src={weatherData.iconUrl}
               alt="weather-icon"
             ></img>
           </div>
@@ -47,9 +58,9 @@ export default function Weather() {
             <ul>
               <li>Wednesday</li>
               <li>12:00 pm</li>
-              <li>Sunny</li>
+              <li className="text-capitalize">{weatherData.description}</li>
               <li className="temperature">
-                25
+                {Math.round(weatherData.temperature)}
                 <span className="units">˚C</span>
               </li>
             </ul>
@@ -63,16 +74,36 @@ export default function Weather() {
           </div>
           <div className="col-md-4">
             Humidity
-            <div className="weather-value">10%</div>
+            <div className="weather-value">{weatherData.humidity}%</div>
           </div>
           <div className="col-md-4">
             Wind
-            <div className="weather-value">30km</div>
+            <div className="weather-value">
+              {Math.round(weatherData.wind)}km/hr
+            </div>
           </div>
         </div>
       </div>
     );
   } else {
-    return <div>Loading...</div>;
+    let apiKey = "0f380eeef06d6360d28eb090a2663364";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleWeatherData);
+    return (
+      <div>
+        <LineWave
+          height="100"
+          width="100"
+          color="#430f58"
+          ariaLabel="line-wave"
+          wrapperStyle={{}}
+          wrapperClass=""
+          visible={true}
+          firstLineColor=""
+          middleLineColor=""
+          lastLineColor=""
+        />
+      </div>
+    );
   }
 }
