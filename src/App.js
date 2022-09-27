@@ -5,9 +5,13 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <Weather defaultCity="New York" />
+        <Weather defaultCity="Calgary" />
         <footer>
-          This project was coded by Natalie Yeung and it is
+          This project was coded by
+          {""}
+          <a href="#"> Natalie Yeung </a>
+          {""}
+          and it is
           <a
             href="https://github.com/nataliey16/search-engine-react.git"
             target="_blank"
