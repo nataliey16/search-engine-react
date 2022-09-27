@@ -2,6 +2,7 @@ import axios from "axios";
 import "./Weather.css";
 import { useState } from "react";
 import { LineWave } from "react-loader-spinner";
+import FormattedDate from "./FormattedDate";
 
 export default function Weather(props) {
   let [weatherData, setWeatherData] = useState({ ready: false });
@@ -9,7 +10,7 @@ export default function Weather(props) {
   function handleWeatherData(response) {
     setWeatherData({
       ready: true,
-      date: "Sept 21 2022",
+      date: new Date(response.data.dt * 1000),
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
@@ -21,53 +22,57 @@ export default function Weather(props) {
   if (weatherData.ready) {
     return (
       <div className="Weather">
+        <div className="container">
+          <form>
+            <div className="row">
+              <div className="col-md-8 col-lg-10">
+                <input
+                  className="form-control"
+                  type="search"
+                  placeholder="Enter a city"
+                  autoFocus="on"
+                ></input>
+              </div>
+              <div className="col-md-4 col-lg-2">
+                <input
+                  className="btn btn-branding "
+                  type="submit"
+                  value="Submit"
+                ></input>
+              </div>
+            </div>
+          </form>
+        </div>
         <header>
-          <ul className="App-header">
-            <li className="current-date">{weatherData.date}</li>
+          <ul className="weather-header">
             <li className="city">{weatherData.city}</li>
+            <li className="current-date">
+              <FormattedDate date={weatherData.date} />
+            </li>
           </ul>
         </header>
-        <form>
-          <div className="row">
-            <div className="col-md-9">
-              <input
-                className="form-control"
-                type="search"
-                placeholder="Enter a city"
-                autoFocus="on"
-              ></input>
-            </div>
-            <div className="col-md-3">
-              <input
-                className="btn btn-branding"
-                type="submit"
-                value="Submit"
-              ></input>
-            </div>
-          </div>
-        </form>
-        <div className="row pt-5">
-          <div className="col-md-6">
+        <div className="row">
+          <div className="col-md-4">
             <img
-              className="img-fluid"
+              className="img-fluid weather-icon"
               src={weatherData.iconUrl}
               alt="weather-icon"
             ></img>
           </div>
-          <div className="col-md-6 city-information">
+          <div className="col-md-8 city-information">
             <ul>
-              <li>Wednesday</li>
-              <li>12:00 pm</li>
-              <li className="text-capitalize">{weatherData.description}</li>
+              <li className="weather-description text-capitalize">
+                {weatherData.description}
+              </li>
               <li className="temperature">
                 {Math.round(weatherData.temperature)}
-                <span className="units">˚C</span>
+                <span className="units font-weight-bolder">˚C</span>
               </li>
             </ul>
           </div>
         </div>
         <hr></hr>
-        <div className="row pt-3 weather-description">
+        <div className="row pt-3 weather-atmosphere">
           <div className="col-md-4">
             Precipitation
             <div className="weather-value">10%</div>
