@@ -8,9 +8,14 @@ function App() {
         <Weather defaultCity="Calgary" />
         <footer>
           This project was coded by
-          {""}
-          <a href="#"> Natalie Yeung </a>
-          {""}
+          <a
+            href="https://github.com/nataliey16/search-engine-react.git"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {" "}
+            Natalie Yeung{" "}
+          </a>
           and it is
           <a
             href="https://github.com/nataliey16/search-engine-react.git"
@@ -18,7 +23,7 @@ function App() {
             rel="noreferrer"
           >
             {" "}
-            open-sourced on Github
+            open-sourced on Github.
           </a>{" "}
         </footer>
       </div>

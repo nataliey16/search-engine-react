@@ -15,7 +15,7 @@ export default function Weather(props) {
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
-      iconUrl: "https://ssl.gstatic.com/onebox/weather/64/sunny.png",
+      iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       description: response.data.weather[0].description,
       city: response.data.name,
     });
@@ -41,7 +41,7 @@ export default function Weather(props) {
         <div className="container">
           <form onClick={handleSubmit}>
             <div className="row">
-              <div className="col-sm-8 col-lg-10">
+              <div className="col-sm-8 col-lg-8">
                 <input
                   className="form-control"
                   type="search"
@@ -50,9 +50,9 @@ export default function Weather(props) {
                   onChange={handleUpdateCity}
                 ></input>
               </div>
-              <div className="col-sm-4 col-lg-2">
+              <div className="col-sm-4 col-lg-4">
                 <input
-                  className="btn btn-branding "
+                  className="btn btn-branding form-control"
                   type="submit"
                   value="Submit"
                 ></input>
