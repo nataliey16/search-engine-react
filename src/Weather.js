@@ -19,6 +19,8 @@ export default function Weather(props) {
       description: response.data.weather[0].description,
       city: response.data.name,
     });
+
+    console.log(new Date(response.data.dt * 1000));
   }
   function search() {
     let apiKey = "0f380eeef06d6360d28eb090a2663364";
