@@ -1,0 +1,7 @@
+.WeatherForecast img {
+  width: 10%;
+}
+
+.WeatherForecast .weather-forecast-min {
+  opacity: 50%;
+}

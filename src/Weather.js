@@ -3,6 +3,7 @@ import "./Weather.css";
 import { useState } from "react";
 import { LineWave } from "react-loader-spinner";
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 
 export default function Weather(props) {
   let [weatherData, setWeatherData] = useState({ ready: false });
@@ -11,6 +12,7 @@ export default function Weather(props) {
   function handleWeatherData(response) {
     setWeatherData({
       ready: true,
+      coordinates: response.data.coord,
       date: new Date(response.data.dt * 1000),
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
@@ -19,11 +21,10 @@ export default function Weather(props) {
       description: response.data.weather[0].description,
       city: response.data.name,
     });
-
-    console.log(new Date(response.data.dt * 1000));
+    console.log(response.data);
   }
   function search() {
-    let apiKey = "0f380eeef06d6360d28eb090a2663364";
+    let apiKey = "ed55b36e362d8733f7d859247cedeaf2";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleWeatherData);
   }
@@ -63,6 +64,7 @@ export default function Weather(props) {
           </form>
         </div>
         <WeatherInfo data={weatherData} />
+        <WeatherForecast coordinates={weatherData.coordinates} />
       </div>
     );
   } else {
