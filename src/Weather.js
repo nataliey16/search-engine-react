@@ -72,8 +72,8 @@ export default function Weather(props) {
     return (
       <div>
         <LineWave
-          height="100"
-          width="100"
+          height="500"
+          width="500"
           color="#430f58"
           ariaLabel="line-wave"
           wrapperStyle={{}}
@@ -82,6 +82,7 @@ export default function Weather(props) {
           firstLineColor=""
           middleLineColor=""
           lastLineColor=""
+          className="d-block justify-center"
         />
       </div>
     );

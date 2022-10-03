@@ -25,24 +25,20 @@ export default function WeatherInfo(props) {
             alt="weather-icon"
           ></img>{" "}
         </div>
-        <div className="col-sm-6 city-information mt-4">
+        <div className="col-sm-6 city-information  text-center">
           <WeatherTemperature celcius={props.data.temperature} />
         </div>
-      </div>
-      <hr></hr>
-      <div className="row pt-3 weather-atmosphere">
-        <div className="col-md-4">
-          Precipitation
-          <div className="weather-value">10%</div>
-        </div>
-        <div className="col-md-4">
-          Humidity
-          <div className="weather-value">{props.data.humidity}%</div>
-        </div>
-        <div className="col-md-4">
-          Wind
-          <div className="weather-value">
-            {Math.round(props.data.wind)}km/hr
+        <hr></hr>
+        <div className="row  weather-atmosphere mb-2 text-center">
+          <div className="col-md-6">
+            Humidity
+            <div className="weather-value">{props.data.humidity}%</div>
+          </div>
+          <div className="col-md-6">
+            Wind
+            <div className="weather-value">
+              {Math.round(props.data.wind)}km/hr
+            </div>
           </div>
         </div>
       </div>
