@@ -74,7 +74,7 @@ export default function Weather(props) {
         <LineWave
           height="500"
           width="500"
-          color="#430f58"
+          color="#a2a8d3"
           ariaLabel="line-wave"
           wrapperStyle={{}}
           wrapperClass=""

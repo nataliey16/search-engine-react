@@ -39,9 +39,9 @@ export default function FormattedDate(props) {
   return (
     <div className="Current-date">
       <div>
-        {month} {date} {year}
+        {month} {date}, {year}
       </div>
-      {day} {time}
+      {day}, {time}
     </div>
   );
 }

@@ -34,62 +34,80 @@
   font-size: 25px;
 }
 
-.Weather img {
+.Weather .weather-icon {
   display: block;
-  margin: 0 auto;
-  width: 25%;
-  padding: 0;
+  margin: auto;
+  float: right;
+  width: 60%;
 }
 .Weather ul {
   list-style: none;
-  margin: 5px 0px;
+  margin: 0px 0px;
 }
 
 .Weather .weather-description {
-  font-size: 35px;
+  font-size: 30px;
 }
 
 .Weather .temperature {
-  padding-bottom: 10px;
-  font-size: 150px;
-  font-weight: 500;
+  font-size: 98px;
+  font-weight: 100;
 }
 
 .Weather .units {
   font-size: 30px;
   font-weight: 300;
+  position: relative;
+  top: -20px;
 }
+
 hr {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
 }
 
-.Weather .weather-atmosphere {
-  font-size: 18px;
+.Weather .testing {
+  color: red;
+  display: flex;
+  flex-direction: column;
 }
 
-.Weather .weather-value {
+.Weather .testing-weather {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.Weather .weather-atmosphere {
+  font-size: 18px;
+  padding: 15px;
+}
+
+.Weather .atmosphere-value {
   font-size: 30px;
   font-weight: 500;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .Weather {
     padding: 30px;
     margin: 10px 30px;
-    max-width: 500px;
-    font-size: 22px;
+    max-width: 700px;
+    font-size: 10px;
     text-align: center;
   }
 
   .Weather .weather-header {
-    text-align: left;
+    text-align: center;
   }
 
-  .Weather img {
+  .Weather .weather-icon {
     width: 70%;
     height: auto;
+    display: block;
+    margin: auto;
+    float: none;
   }
 
   .weather .form-control {
@@ -107,5 +125,20 @@ hr {
     text-align: center;
     font-size: 90px;
     font-weight: 200px;
+  }
+
+  .Weather .units {
+    font-size: 30px;
+    font-weight: 300;
+    position: relative;
+    top: -20px;
+  }
+
+  .Weather .weather-atmosphere {
+    font-size: 15px;
+  }
+  .Weather .atmosphere-value {
+    font-size: 20px;
+    font-weight: 500;
   }
 }

@@ -19,8 +19,16 @@ function App() {
             rel="noreferrer"
           >
             {" "}
-            open-sourced on Github.
+            open-sourced on Github
           </a>{" "}
+          and hosted on{" "}
+          <a
+            href="https://github.com/nataliey16/search-engine-react.git"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Netlify
+          </a>
         </footer>
       </div>
     </div>

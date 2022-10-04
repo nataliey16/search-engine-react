@@ -7,33 +7,43 @@ export default function WeatherInfo(props) {
   return (
     <div>
       <header className="row">
-        <ul className="weather-header col-sm-6">
+        <ul className="weather-header col-md-6">
           <li className="city">{props.data.city}</li>
           <li className="current-date">
             <FormattedDate date={props.data.date} />
           </li>
         </ul>
-        <div className="col-sm-6">
+        <div className="col-md-6 justify-content-right">
+          <img
+            className="img-fluid weather-icon"
+            src={props.data.iconUrl}
+            alt="weather-icon"
+          ></img>
+        </div>
+      </header>
+      <div className="row testing-weather ">
+        <div className="col weather-description text-capitalize text-center pt-3">
+          {" "}
+          {props.data.description}
+        </div>
+        <div className="col">
           {" "}
           <WeatherTemperature celcius={props.data.temperature} />{" "}
         </div>
-      </header>
-      <div className=" weather-description text-capitalize text-center ">
-        {props.data.description}
-      </div>{" "}
-      <img
-        className="img-fluid weather-icon weather-description text-capitalize text-center"
-        src={props.data.iconUrl}
-        alt="weather-icon"
-      ></img>{" "}
-      <div className="row  weather-atmosphere  text-center">
+      </div>
+      {/* <div className="row testing ">
+        <div className="col">hello</div>
+        <div className="col">hello</div>
+        <div className="col">hello</div>
+      </div> */}
+      <div className="row  weather-atmosphere">
         <div className="col-sm-6">
           Humidity
-          <div className="weather-value">{props.data.humidity}%</div>
+          <div className="atmosphere-value">{props.data.humidity}%</div>
         </div>
         <div className="col-sm-6">
           Wind
-          <div className="weather-value">
+          <div className="atmosphere-value">
             {Math.round(props.data.wind)}km/hr
           </div>
         </div>
