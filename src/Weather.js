@@ -82,7 +82,6 @@ export default function Weather(props) {
           firstLineColor=""
           middleLineColor=""
           lastLineColor=""
-          className="d-block justify-center"
         />
       </div>
     );

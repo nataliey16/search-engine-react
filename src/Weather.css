@@ -7,22 +7,22 @@
   );
   border: 1px solid (255, 0, 0);
   border-radius: 40px;
-  padding: 30px 30px;
+  padding: 50px 50px;
   max-width: 1200px;
   font-family: "Raleway", sans-serif;
-  font-size: 20px;
+  font-size: 15px;
   text-align: center;
 }
 
 .Weather .btn-branding {
   background: #a2a8d3;
   color: white;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 500px;
 }
 
 .Weather .weather-header {
-  margin-top: 50px;
+  margin-top: 40px;
   text-align: left;
 }
 
@@ -37,8 +37,8 @@
 .Weather img {
   display: block;
   margin: 0 auto;
-  width: 80%;
-  height: auto;
+  width: 25%;
+  padding: 0;
 }
 .Weather ul {
   list-style: none;
@@ -46,12 +46,12 @@
 }
 
 .Weather .weather-description {
-  font-size: 30px;
+  font-size: 35px;
 }
 
 .Weather .temperature {
-  padding-top: 20px;
-  font-size: 140px;
+  padding-bottom: 10px;
+  font-size: 150px;
   font-weight: 500;
 }
 
