@@ -23,7 +23,7 @@ function App() {
           </a>{" "}
           and hosted on{" "}
           <a
-            href="https://github.com/nataliey16/search-engine-react.git"
+            href="https://clinquant-cheesecake-c78d8c.netlify.app"
             target="_blank"
             rel="noreferrer"
           >
