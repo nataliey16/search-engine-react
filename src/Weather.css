@@ -7,7 +7,7 @@
   );
   border: 1px solid (255, 0, 0);
   border-radius: 40px;
-  padding: 30px 30px;
+  padding: 50px 50px;
   max-width: 1200px;
   font-family: "Raleway", sans-serif;
   font-size: 15px;
@@ -38,7 +38,7 @@
   display: block;
   margin: auto;
   float: right;
-  width: 60%;
+  width: 250px;
 }
 .Weather ul {
   list-style: none;
@@ -50,8 +50,8 @@
 }
 
 .Weather .temperature {
-  font-size: 98px;
-  font-weight: 100;
+  font-size: 120px;
+  font-weight: 100px;
 }
 
 .Weather .units {
