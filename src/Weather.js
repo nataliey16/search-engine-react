@@ -21,7 +21,6 @@ export default function Weather(props) {
       description: response.data.weather[0].description,
       city: response.data.name,
     });
-    console.log(response.data);
   }
   function search() {
     let apiKey = "ed55b36e362d8733f7d859247cedeaf2";
@@ -70,7 +69,7 @@ export default function Weather(props) {
   } else {
     search();
     return (
-      <div>
+      <div className="Loading-spinner text-center">
         <LineWave
           height="500"
           width="500"
