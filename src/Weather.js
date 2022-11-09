@@ -69,10 +69,10 @@ export default function Weather(props) {
   } else {
     search();
     return (
-      <div className="Loading-spinner">
+      <div className="d-flex justify-content-center">
         <LineWave
-          height="500"
-          width="500"
+          height="800"
+          width="300"
           color="#a2a8d3"
           ariaLabel="line-wave"
           wrapperStyle={{}}
