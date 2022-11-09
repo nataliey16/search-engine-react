@@ -21,8 +21,8 @@ export default function WeatherInfo(props) {
           ></img>
         </div>
       </header>
-      <div className="row testing-weather ">
-        <div className="col weather-description text-capitalize text-center pt-3">
+      <div className="row temp-weather ">
+        <div className="col weather-description text-capitalize text-center">
           {" "}
           {props.data.description}
         </div>
@@ -31,11 +31,7 @@ export default function WeatherInfo(props) {
           <WeatherTemperature celcius={props.data.temperature} />{" "}
         </div>
       </div>
-      {/* <div className="row testing ">
-        <div className="col">hello</div>
-        <div className="col">hello</div>
-        <div className="col">hello</div>
-      </div> */}
+
       <div className="row  weather-atmosphere">
         <div className="col-sm-6">
           Humidity

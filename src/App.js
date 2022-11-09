@@ -7,19 +7,16 @@ function App() {
       <div className="container">
         <Weather defaultCity="Calgary" />
         <footer>
-          This project was coded by
-          <a href="/" target="_blank" rel="noreferrer">
-            {" "}
-            Natalie Yeung{" "}
-          </a>
-          and it is
+          This project was coded by <span className="name">Natalie Yeung.</span>
+          <br />
+          It is open-sourced on
           <a
             href="https://github.com/nataliey16/search-engine-react.git"
             target="_blank"
             rel="noreferrer"
           >
             {" "}
-            open-sourced on Github
+            Github
           </a>{" "}
           and hosted on{" "}
           <a
@@ -27,7 +24,7 @@ function App() {
             target="_blank"
             rel="noreferrer"
           >
-            Netlify
+            Netlify.
           </a>
         </footer>
       </div>

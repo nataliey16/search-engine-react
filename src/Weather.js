@@ -42,19 +42,19 @@ export default function Weather(props) {
       <div className="Weather">
         <div className="container-fluid">
           <form onClick={handleSubmit}>
-            <div className="row">
-              <div className="col-sm-8 col-lg-8">
+            <div className="row ">
+              <div className="col-lg-8 col-lg-8">
                 <input
-                  className="form-control"
+                  className="form-control search-engine-submit"
                   type="search"
                   placeholder="Enter a city"
                   autoFocus="on"
                   onChange={handleUpdateCity}
                 ></input>
               </div>
-              <div className="col-sm-4 col-lg-4">
+              <div className="col-lg-4 col-lg-4 ">
                 <input
-                  className="btn btn-branding form-control"
+                  className="btn btn-branding form-control search-engine-submit"
                   type="submit"
                   value="Submit"
                 ></input>
@@ -69,7 +69,7 @@ export default function Weather(props) {
   } else {
     search();
     return (
-      <div className="Loading-spinner text-center">
+      <div className="Loading-spinner">
         <LineWave
           height="500"
           width="500"

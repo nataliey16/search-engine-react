@@ -19,15 +19,24 @@
 }
 
 .App footer {
-  font-size: 12px;
-  margin: 10px 10px;
+  font-size: 20px;
+  margin: 50px 0px;
   text-align: center;
+}
+.App .name {
+  color: #5f5dbd;
+  font-weight: bolder;
 }
 
 .App a {
   color: #5f5dbd;
   font-weight: bolder;
   text-decoration: none;
+}
+
+.App a:hover {
+  color: #5f5dbd;
+  opacity: 0.5;
 }
 
 @media (max-width: 700px) {
